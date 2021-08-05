@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "multi-level-tiles-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/multiLevelTiles/MultiLevelTilesWebPart.js",
+          "manifest": "./src/webparts/multiLevelTiles/MultiLevelTilesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MultiLevelTilesWebPartStrings": "lib/webparts/multiLevelTiles/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

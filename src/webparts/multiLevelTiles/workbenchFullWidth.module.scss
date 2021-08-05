@@ -1,0 +1,29 @@
+:global #workbenchPageContent {
+    //max-width:1268px;
+    max-width:100%;
+
+  .selected-65::after {
+    border:none;
+  }
+  
+  .CanvasComponent {
+    .CanvasToolboxHint{
+      opacity:0 !important;
+    }
+    .CanvasZone {
+      max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0;
+
+      .CanvasSection {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .ControlZone {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+

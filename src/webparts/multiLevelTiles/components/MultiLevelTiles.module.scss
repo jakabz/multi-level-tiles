@@ -1,0 +1,144 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.multiLevelTiles {
+  .container {
+    margin: 0px 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+    .tilesAllLevel.vertical {
+      display: flex;
+      flex-direction: row;
+
+      .tileLevel {
+        width:auto;
+        display: flex;
+        flex-direction: column;
+
+        .tileContainer {
+          display: flex;
+          margin: 3px;
+          position: relative;
+          flex-direction: column;
+          align-items: stretch;
+
+          .tile {
+            text-align: center;
+            min-width: 150px;
+            max-width: 326px;
+            padding: 10px 20px;
+            cursor: pointer;
+
+            .IconContainer {
+              padding: 3px;
+              text-align: center;
+              vertical-align: middle;
+            }
+
+            .titleContainer {
+              padding: 0;
+            }
+          }
+
+          .tile:hover {
+            opacity: 0.8 !important;
+          }
+
+          .openContainer {
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            height: -webkit-fill-available;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0);
+          }
+
+          .openContainer:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+    
+    .tilesAllLevel.horizontal {
+      display: flex;
+      flex-direction: column;
+
+      .tileLevel {
+        width:auto;
+        display: flex;
+        flex-direction: row;
+
+        .tileContainer {
+          display: flex;
+          margin: 3px;
+          position: relative;
+          flex-direction: row;
+          align-items: stretch;
+
+          .tile {
+            text-align: center;
+            min-width: 150px;
+            max-width: 326px;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding-bottom:20px;
+
+            .IconContainer {
+              padding: 3px;
+              text-align: center;
+              vertical-align: middle;
+            }
+
+            .titleContainer {
+              padding: 0;
+            }
+          }
+
+          .tile:hover {
+            opacity: 0.8 !important;
+          }
+          
+          .openContainer {
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            width: -webkit-fill-available;
+            text-align: center;
+            justify-content: space-evenly;
+            background-color: rgba(255, 255, 255, 0);
+
+            i {
+              transform: rotateZ(90deg);
+            }
+          }
+
+          .openContainer:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
+
+.tileContainer.disabled {
+  opacity: 0.3;
+
+  .tile {
+    cursor: default !important;
+  }
+  .tile:hover {
+    opacity: 1 !important;
+  }
+}
